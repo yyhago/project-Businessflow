@@ -1,10 +1,12 @@
-*{
+/* Estilo global */
+* {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-html, body #root{
-  background-color: #D2D3D9;
-  height: 100%;
+html, body, #root {
+  background-color: #d2d3d9;
   font-family: 'Poppins', sans-serif;
+  height: 100%;
 }
