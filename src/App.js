@@ -1,6 +1,5 @@
-// App.js
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
 import Home from "./Components/Pages/Home";
 import Contato from "./Components/Pages/Contato";
 import Empresa from "./Components/Pages/Empresa";
