@@ -1,9 +1,11 @@
 .footer {
-  background-color: #293040;
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Garante que o footer ocupa 100% da largura da tela */
+  background-color: #6a8fca;
   color: #fff;
   padding: 2em;
-  text-align: center;
-  margin-top: 66vh
+  text-align: center
 }
 
 .social_list {
@@ -17,7 +19,7 @@
 }
 
 .social_list li:hover {
-  color: #b8b8c8;
+  color: #51c2ec;
 }
 
 .social_list svg {
@@ -31,5 +33,5 @@
 
 .copy_right span {
   font-weight: bold;
-  color: #b8b8c8;
+  color: #ffffff;
 }

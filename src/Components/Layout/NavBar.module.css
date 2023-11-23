@@ -1,11 +1,12 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: #293040;
+    background-color: #6a8fca;
     padding: 1em;
   }
   
 img{
+  padding: .5%;
   width: 24%;
 }
 
@@ -26,7 +27,6 @@ img{
   }
   
   .item a:hover {
-    color: #b8b8c8;
+    color: #51c2ec;
     text-decoration: none;
   }
-  

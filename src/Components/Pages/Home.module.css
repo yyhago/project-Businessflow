@@ -1,0 +1,39 @@
+/* Home.module.css */
+.homecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5em;
+  text-align: left;
+  height: auto;
+}
+
+.h1Text {
+  text-align: left;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  height: auto;
+  overflow: visible;
+}
+
+.span {
+  text-align: left;
+  background-color: #6a8fca;
+  color: white;
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding:5px
+}
+
+.rocket-image {
+  width: 200%;
+  max-width: 400px;
+  margin-right: 3em;
+}
+
+.pTexto{
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 40px;
+  padding-bottom: 16px;
+}
