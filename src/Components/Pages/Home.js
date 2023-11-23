@@ -14,7 +14,7 @@ export default function Home() {
         </h1>
         <p className={styles.pTexto}>
           O seu melhor aliado no gerenciamento de projetos! Estamos aqui para simplificar o seu dia a dia,
-          ajudando na proporção uma experiência eficiente e intuitiva, para você e suas receitas!
+          ajudando na proporção uma experiência eficiente e intuitiva, para você e suas receitas!!
         </p>
         <LinkButton to="/newproject" text="Criar Projeto"/>
       </div>
