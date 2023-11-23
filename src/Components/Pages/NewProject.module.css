@@ -1,0 +1,41 @@
+.newProjectContainer {
+    display: flex;
+    align-items: center;
+    padding: 4em;
+  }
+  
+  .newProjectContent {
+    margin-bottom: 40px;
+    margin-right: 250px;
+    max-width: 50%; 
+    text-align: left;
+  }
+  
+  .newProjectImage {
+    width: 400px;
+    max-width: 50%;
+  }
+  
+  .newProjectContent h1 {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .newProjectContent span {
+    text-align: left;
+    background-color: #6a8fca;
+    color: white;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding:5px
+  }
+  
+  .newProjectContent p {
+    margin-top: 1em;
+  }
+
+  .brStrong{
+    color: #6a8fca;
+    font-size: 20px;
+  }
+  

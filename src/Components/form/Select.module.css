@@ -1,0 +1,12 @@
+.selectContainer{
+    width: 420px;
+    padding: 16px;
+    font-size: 16px;
+    text-align: left;
+    background-color: #6a8fca;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px black;
+}
