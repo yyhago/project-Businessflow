@@ -1,5 +1,17 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "name": "Site Narguilharia",
+      "valorTotal": "14.000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "valor": 0,
+      "servicos": [],
+      "id": 1
+    }
+  ],
   "categoris": [
     {
       "id": 1,
