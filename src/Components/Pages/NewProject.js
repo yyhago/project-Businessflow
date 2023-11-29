@@ -22,7 +22,7 @@ export default function NewProject() {
     }).then((resp) => resp.json())
     .then((data) => {
       console.log(data)
-      navigate('/project', {message:'Projeto Criado Sem Nenhum Erro!!'})
+      navigate('/project',{state:{message:'Parabéns meu caro! Seu Projeto foi Adicionado com Sucesso!'}})  // necessario 'state' após ultimas att
     })
     .catch(err => console.log(err))
   }

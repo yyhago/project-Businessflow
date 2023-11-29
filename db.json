@@ -1,17 +1,5 @@
 {
-  "projects": [
-    {
-      "name": "Time Fall Gays",
-      "valorTotal": "4.000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "valor": 0,
-      "servicos": [],
-      "id": 1
-    }
-  ],
+  "projects": [],
   "categoris": [
     {
       "id": 1,
