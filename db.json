@@ -1,21 +1,33 @@
 {
-    "projects":[],
-    "categoris":[
-        {
-            "id":1,
-            "name": "Infraestrutura"
-        },
-        {
-            "id":2,
-            "name": "Desenvolvimento"
-        },
-        {
-            "id":3,
-            "name": "Design"
-        },
-        {
-            "id":4,
-            "name": "Planejamento"
-        }
-    ]
+  "projects": [
+    {
+      "name": "Time Fall Gays",
+      "valorTotal": "4.000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "valor": 0,
+      "servicos": [],
+      "id": 1
+    }
+  ],
+  "categoris": [
+    {
+      "id": 1,
+      "name": "Infraestrutura"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
 }
