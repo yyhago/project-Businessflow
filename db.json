@@ -1,15 +1,48 @@
 {
   "projects": [
     {
-      "name": "Site Narguilharia",
-      "valorTotal": "14.000",
+      "name": "Contrução LogoMarca",
+      "valorTotal": "15.000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "valor": 0,
+      "servicos": [],
+      "id": 1
+    },
+    {
+      "name": "Contrução empresa de Jogos",
+      "valorTotal": "40.000",
+      "category": {
+        "id": "1",
+        "name": "Infraestrutura"
+      },
+      "valor": 0,
+      "servicos": [],
+      "id": 2
+    },
+    {
+      "name": "Testando Aplicacao",
+      "valorTotal": "30.000",
       "category": {
         "id": "3",
         "name": "Design"
       },
       "valor": 0,
       "servicos": [],
-      "id": 1
+      "id": 3
+    },
+    {
+      "name": "Criar PC GAMER",
+      "valorTotal": "30.000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "valor": 0,
+      "servicos": [],
+      "id": 4
     }
   ],
   "categoris": [
