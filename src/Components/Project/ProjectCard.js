@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import styles from "./ProjectCard.module.css"
-import { bsPencil, BsFillTrashFill, BsPencil, BsPen } from "react-icons/bs"
+import { BsFillTrashFill, BsPencil } from "react-icons/bs"
 
 export default function ProjectCard ({ id, name, category, valorTotal, handleRemove }) {
     return(
