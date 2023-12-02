@@ -1,81 +1,26 @@
 {
   "projects": [
     {
-      "name": "Contrução LogoMarca",
-      "valorTotal": "15.000",
+      "name": "Arquitetura Web | Empresa",
+      "valorTotal": "40.000",
       "category": {
-        "id": "4",
-        "name": "Planejamento"
+        "id": "1",
+        "name": "Infraestrutura"
       },
       "valor": 0,
       "servicos": [],
       "id": 1
     },
     {
-      "name": "Contrução empresa de Jogos",
-      "valorTotal": "40.000",
+      "name": "Maquiagem",
+      "valorTotal": "20.000",
       "category": {
-        "id": "1",
-        "name": "Infraestrutura"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "valor": 0,
       "servicos": [],
       "id": 2
-    },
-    {
-      "name": "Testando Aplicacao",
-      "valorTotal": "30.000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "valor": 0,
-      "servicos": [],
-      "id": 3
-    },
-    {
-      "name": "Criar PC GAMER",
-      "valorTotal": "30.000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "valor": 0,
-      "servicos": [],
-      "id": 4
-    },
-    {
-      "name": "Construir uma casa",
-      "valorTotal": "40.000",
-      "category": {
-        "id": "1",
-        "name": "Infraestrutura"
-      },
-      "valor": 0,
-      "servicos": [],
-      "id": 5
-    },
-    {
-      "name": "Apartamento",
-      "valorTotal": "24.444",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "valor": 0,
-      "servicos": [],
-      "id": 6
-    },
-    {
-      "name": "dadadad",
-      "valorTotal": "233232",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "valor": 0,
-      "servicos": [],
-      "id": 7
     }
   ],
   "categoris": [
