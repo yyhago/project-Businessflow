@@ -4,11 +4,13 @@ import Message from "../Layout/Message";
 import Container from "../Layout/Container";
 import LinkButton from "../Layout/LinkButton";
 import ProjectCard from "../Project/ProjectCard";
+import Loading from "../Layout/Loading";
 
 import styles from "./Project.module.css";
 
 export default function Project() {
   const [projects, setProjects] = useState([]);
+  const [removLoading, setRemovLoading] = useState(false);
 
   const location = useLocation();
   let message = "";
@@ -17,18 +19,21 @@ export default function Project() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:5000/projects", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data)
-        setProjects(data)
+    setTimeout(() => {
+      fetch("http://localhost:5000/projects", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((err) => console.log(err));
+        .then((resp) => resp.json())
+        .then((data) => {
+          console.log(data);
+          setProjects(data);
+          setRemovLoading(true);
+        })
+        .catch((err) => console.log(err));
+    }, 500);
   }, []);
 
   return (
@@ -48,13 +53,18 @@ export default function Project() {
       )}
       <Container customClass="start">
         {projects.length > 0 &&
-          projects.map((project) => <ProjectCard
-          id={project.id}
-          name={project.name}
-          valorTotal={project.valorTotal}
-          category={project.category ? project.category.name : 'Sem categoria'}
-          key={project.id}
-          />)}
+          projects.map((project) => (
+            <ProjectCard
+              id={project.id}
+              name={project.name}
+              valorTotal={project.valorTotal}
+              category={
+                project.category ? project.category.name : "Sem categoria"
+              }
+              key={project.id}
+            />
+          ))}
+        {!removLoading && <Loading />}
       </Container>
     </div>
   );
