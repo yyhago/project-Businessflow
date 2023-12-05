@@ -65,6 +65,9 @@ export default function Project() {
             />
           ))}
         {!removLoading && <Loading />}
+        {removLoading && projects.length === 0 && (
+          <p>Não há Projetos Cadastrados no seu Sistema!</p>
+        )}
       </Container>
     </div>
   );
