@@ -11,6 +11,7 @@ import styles from "./Project.module.css";
 export default function Project() {
   const [projects, setProjects] = useState([]);
   const [removLoading, setRemovLoading] = useState(false);
+  const [messageProject, setMessageProject] = useState('')
 
   const location = useLocation();
   let message = "";
@@ -36,6 +37,23 @@ export default function Project() {
     }, 500);
   }, []);
 
+
+    function removeProjeto(id) {
+      fetch(`http://localhost:5000/projects/${id}`,{
+        method: 'DELETE',
+        headers:{
+          'Content-Type':'application/json'
+        },
+    })
+    .then((resp) => resp.json())
+    .then(() => {
+      setProjects(projects.filter((project) => project.id !== id))
+      setMessageProject('Projeto Removido no Sistema com Sucesso')
+    })
+    .catch((err) => console.log(err))
+    }
+
+
   return (
     <div className={styles.projectContainer}>
       <div className={styles.titleContainer}>
@@ -51,6 +69,12 @@ export default function Project() {
           msg={message}
         />
       )}
+      {messageProject && (
+        <Message
+          type="sucesso"
+          msg={messageProject}
+        />
+      )}
       <Container customClass="start">
         {projects.length > 0 &&
           projects.map((project) => (
@@ -62,6 +86,7 @@ export default function Project() {
                 project.category ? project.category.name : "Sem categoria"
               }
               key={project.id}
+              handleRemove={removeProjeto}
             />
           ))}
         {!removLoading && <Loading />}

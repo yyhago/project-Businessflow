@@ -1,26 +1,26 @@
 {
   "projects": [
     {
-      "name": "Arquitetura Web | Empresa",
-      "valorTotal": "40.000",
+      "name": "Empresa Uber",
+      "valorTotal": "120.000",
       "category": {
-        "id": "1",
-        "name": "Infraestrutura"
+        "id": "4",
+        "name": "Planejamento"
       },
       "valor": 0,
       "servicos": [],
-      "id": 1
+      "id": 2
     },
     {
-      "name": "Maquiagem",
-      "valorTotal": "20.000",
+      "name": "Empresa Ifood",
+      "valorTotal": "304.000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
       "valor": 0,
       "servicos": [],
-      "id": 2
+      "id": 3
     }
   ],
   "categoris": [

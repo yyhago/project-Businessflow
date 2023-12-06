@@ -9,6 +9,7 @@ import NavBar from "./Components/Layout/NavBar";
 import Project from "./Components/Pages/Project";
 import Footer from "./Components/Layout/Footer";
 import styles from "./Components/Layout/Container.module.css";
+import EditProject from "./Components/Pages/EditProject";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Container customClass="min-height">
           <Routes>
             <Route
+              exact
               path="/"
               element={<Home />}
             />
@@ -37,6 +39,10 @@ function App() {
             <Route
               path="/project"
               element={<Project />}
+            />
+            <Route
+              path="/editproject/:id"
+              element={<EditProject />}
             />
           </Routes>
         </Container>
