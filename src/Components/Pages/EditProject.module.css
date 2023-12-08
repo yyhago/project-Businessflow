@@ -1,5 +1,6 @@
 .detalhesProjetos{
-        padding: 2em;
+    box-sizing: border-box;
+    padding-top: 2em;
 }
 
 .detalhesProjetos h1,
@@ -53,4 +54,5 @@
 
   .infoProject{
     width: 100%;
+    
   }

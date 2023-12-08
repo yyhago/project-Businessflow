@@ -64,7 +64,7 @@ export default function ProjectForm({ handleSubmit, btnTest, projectData }) {
 
       <Select
         name="idCategoria"
-        text="Selecione a categoria"
+        text="Selecione a categoria" 
         options={categoris}
         handleOnChange={handleCategory}
         value={project.category ? project.category.id: ''}
