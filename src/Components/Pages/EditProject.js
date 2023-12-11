@@ -13,6 +13,7 @@ export default function EditProject() {
   const [mostraProjeto, setMostraProjeto] = useState(false);
   const [message, setMessage] = useState()
   const [type, setType] = useState()
+  const [mostrarServicoForm, setMostrarServicoForm] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,6 +33,7 @@ export default function EditProject() {
   }, [id]);
 
   function editPost(project) {
+    setMessage('')
     //validação valorTotal
     if (project.valorTotal < project.valor) {
       setMessage('O orçamento não pode ser menor que o custo do seu projeto!')
@@ -57,6 +59,10 @@ export default function EditProject() {
 
   function toogleProjectForm() {
     setMostraProjeto(!mostraProjeto);
+  }
+
+  function toogleServiceForm(){
+    setMostrarServicoForm(!mostrarServicoForm)
   }
 
   return (
@@ -88,6 +94,19 @@ export default function EditProject() {
                 </div>
               )}
             </div>
+            <div className={styles.serviceFomContainer}>
+                <h2>Adicionar Serviço:</h2>
+                <button onClick={toogleServiceForm} className={styles.btnnewproject}>
+                {!mostrarServicoForm ? 'Adicionar Serviço' : 'Fechar'}
+              </button>
+              <div className={styles.infoProject}>
+                {mostrarServicoForm && <div>Formulario do Serviço</div>}
+              </div>
+            </div>
+            <h2>Serviços</h2>
+            <Container customClass="start">
+                <p>Itens de Serviços</p>
+            </Container>
           </Container>
         </div>
       ) : (
