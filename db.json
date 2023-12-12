@@ -1,15 +1,29 @@
 {
   "projects": [
     {
-      "name": "Construção Civil",
-      "valorTotal": "203.000",
+      "name": "Desenvolvimento Saude",
+      "valorTotal": "344.000",
       "category": {
-        "id": "1",
-        "name": "Infraestrutura"
+        "id": "4",
+        "name": "Planejamento"
       },
-      "valor": 0,
+      "valor": 200,
       "servicos": [],
-      "id": 1
+      "id": 2,
+      "services": [
+        {
+          "name": "Servico Teste",
+          "valor": "100",
+          "description": "Descricao servicooo",
+          "id": "8931d9ee-2564-4fc0-9155-cc4ce35f31a2"
+        },
+        {
+          "name": "Servico Teste",
+          "valor": "100",
+          "description": "Descricao servicooo",
+          "id": "8931d9ee-2564-4fc0-9155-cc4ce35f31a2"
+        }
+      ]
     }
   ],
   "categoris": [
