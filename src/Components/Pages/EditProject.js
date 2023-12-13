@@ -4,6 +4,7 @@ import Container from "../Layout/Container";
 import ProjectForm from "../Project/ProjectForm";
 import Message from "../Layout/Message";
 import ServiceForm from "../services/ServiceForm";
+import ServiceCard from "../services/ServiceCard"
 
 import { parse, v4 as uuidv4 } from "uuid";
 
@@ -14,6 +15,7 @@ export default function EditProject() {
   const { id } = useParams();
 
   const [editProject, setEditProject] = useState([]);
+  const [services, setServices] = useState([]);
   const [mostraProjeto, setMostraProjeto] = useState(false);
   const [message, setMessage] = useState();
   const [type, setType] = useState();
@@ -31,6 +33,7 @@ export default function EditProject() {
         .then((data) => {
           console.log("Dados da API:", data);
           setEditProject(data);
+          setServices(data.services || []);
         })
         .catch((err) => console.log(err));
     }, 500);
@@ -38,7 +41,7 @@ export default function EditProject() {
 
   function editPost(project) {
     setMessage("");
-    //validação valorTotal
+    // validação valorTotal
     if (project.valorTotal < project.valor) {
       setMessage("O orçamento não pode ser menor que o custo do seu projeto!");
       setType("erro");
@@ -62,7 +65,7 @@ export default function EditProject() {
   }
 
   function createService(project) {
-    setMessage('')
+    setMessage("");
 
     const ultimoServico = project.services[project.services.length - 1];
     ultimoServico.id = uuidv4();
@@ -72,7 +75,7 @@ export default function EditProject() {
       parseFloat(project.valor) + parseFloat(ultimoServicoValor);
 
     if (novoValor > parseFloat(project.valorTotal)) {
-      //VALIDAÇÃO DO SERVIÇO
+      // VALIDAÇÃO DO SERVIÇO
       setMessage("Orçamento ultrapassado, verifique o valor do serviço!");
       setType("erro");
       project.services.pop();
@@ -90,10 +93,14 @@ export default function EditProject() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        //mostra serviços
-        console.log(data)
+        setServices(data.services || []);
+        setMostrarServicoForm(false)
       })
       .catch((err) => console.log(err));
+  }
+
+  function removeService(){
+
   }
 
   function toogleProjectForm() {
@@ -166,7 +173,20 @@ export default function EditProject() {
             </div>
             <h2>Serviços</h2>
             <Container customClass="start">
-              <p>Itens de Serviços</p>
+              {services && services.length > 0 ? (
+                services.map((service) => (
+                  <ServiceCard
+                     id={service.id}
+                     name={service.name}
+                     valor={service.valor}
+                     description={service.description}
+                     key={service.id}
+                     handleRemove={removeService}    //PAREI NA FUNCAO DE REMOVER SERVICO
+                  />
+                ))
+              ) : (
+                <p>Não há serviços cadastrados no sistema!</p>
+              )}
             </Container>
           </Container>
         </div>

@@ -7,7 +7,7 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "valor": 200,
+      "valor": 300,
       "servicos": [],
       "id": 2,
       "services": [
@@ -22,6 +22,49 @@
           "valor": "100",
           "description": "Descricao servicooo",
           "id": "8931d9ee-2564-4fc0-9155-cc4ce35f31a2"
+        },
+        {
+          "name": "Arrumar Oxigênio",
+          "valor": "50.000",
+          "description": "Testando",
+          "id": "6b36811d-8e1b-4fa5-82ba-d0baf25efff5"
+        },
+        {
+          "name": "Arrumar Oxigênio",
+          "valor": "50.000",
+          "description": "Testando",
+          "id": "2c93db48-3bf2-4e1f-81d8-f0fc71d593f4"
+        }
+      ]
+    },
+    {
+      "name": "Projeto Illusion ",
+      "valorTotal": "323.000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "valor": 44,
+      "servicos": [],
+      "id": 3,
+      "services": [
+        {
+          "name": "Comprar 50 nargas",
+          "valor": "12.000",
+          "description": "Comprar do lugar mais barato e de qualidade!",
+          "id": "55cb8945-4f36-48c5-b6bb-03174b85a694"
+        },
+        {
+          "name": "Comprar 50 nargas",
+          "valor": "12.000",
+          "description": "Comprar do lugar mais barato e de qualidade!",
+          "id": "55cb8945-4f36-48c5-b6bb-03174b85a694"
+        },
+        {
+          "name": "Contratar Emprego",
+          "valor": "20.000",
+          "description": "descricaooo",
+          "id": "48121444-d2e9-4df9-914e-032db917a266"
         }
       ]
     }
