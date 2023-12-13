@@ -3,7 +3,10 @@ import styles from "../Project/ProjectCard.module.css"
 
 export default function ServiceCard({ id, name, valor, description, handleRemove }){
 
-    const remove = (e) => {}
+    const remove = (e) => {
+        e.preventDefault()
+        handleRemove(id,valor)
+    }
 
     return(
         <div className={styles.cardProject}>

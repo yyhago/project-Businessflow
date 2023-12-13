@@ -99,7 +99,27 @@ export default function EditProject() {
       .catch((err) => console.log(err));
   }
 
-  function removeService(){
+  function removeService(id,valor){
+    const servicesUpdate = editProject.services.filter(
+      (service) => service.id !== id
+    )
+      const projectUpdate = editProject
+      projectUpdate.services = servicesUpdate
+      projectUpdate.valor = parseFloat(projectUpdate.valor) - parseFloat(valor)
+
+      fetch(`http://localhost:5000/projects/${projectUpdate.id}`,{
+        method:'PATCH',
+        headers:{
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(projectUpdate)
+      }).then((resp) => resp.json())
+      .then((data) => {
+        setEditProject(projectUpdate)
+        setServices(servicesUpdate)
+        setMessage('Serviço removido com sucesso!')
+      })
+      .catch(err => console.log(err))
 
   }
 
@@ -140,7 +160,7 @@ export default function EditProject() {
                     <span>Orçamento Total: R$</span> {editProject.valorTotal}
                   </p>
                   <p>
-                    <span>Orçamento Utilizado: R$</span> {editProject.valor}
+                    <span>Orçamento Utilizado: R$</span> {editProject.valor}.000
                   </p>
                 </div>
               ) : (
