@@ -6,7 +6,7 @@ import Message from "../Layout/Message";
 import ServiceForm from "../services/ServiceForm";
 import ServiceCard from "../services/ServiceCard"
 
-import { parse, v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
